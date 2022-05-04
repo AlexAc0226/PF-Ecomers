@@ -1,5 +1,6 @@
 module.exports= function init(){
     
+
     //const user = require("./models/User.js");
     const category = require("./models/Category.js");
     const products = require("./models/Product.js");
@@ -12,5 +13,6 @@ module.exports= function init(){
 
     products.belongsToMany(category,{ through: "product_category" })
     category.belongsToMany(products,{ through: "product_category" })
+
 
 }

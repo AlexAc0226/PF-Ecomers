@@ -2,7 +2,9 @@ const { DataTypes } = require("sequelize");
 
 const sequelize = require("../db");
 
-const Category = sequelize.define("Music", {
+
+const Category = sequelize.define("category", {
+
   id: {
     type: DataTypes.STRING,
     allowNull: false,

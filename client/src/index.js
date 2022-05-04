@@ -5,14 +5,14 @@ import App from './App';
 
 //Conexion al store
 import { Provider } from 'react-redux';
-import { store } from './redux/store/index.js';
+import { store } from './redux/store/index';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Provider store={store}>
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
-  </Provider>
 );
 

@@ -5,4 +5,7 @@ let routerProducts = require("./products.js");
 
 router.use("/products", routerProducts)
 
+
+
+
 module.exports = router;

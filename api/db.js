@@ -13,7 +13,13 @@ const {
 //Conexion a la base de datos
 const db = new Sequelize(`postgres://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}`, {
     logging: false,
+
+    native: false,
+    define: {
+    timestamps: false
+  }
     native: false
+
 });
 
 module.exports = db

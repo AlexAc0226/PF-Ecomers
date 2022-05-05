@@ -5,7 +5,7 @@ const SERVER = "http://localhost:3001";
 
 
 
-export const getAllProducts=()=>async(dispatch)=>{
+export const getAllProducts = ()=>async(dispatch)=>{
     dispatch({
         type:GET_ALL_PRODUCTS_REQUEST
     })
@@ -21,5 +21,10 @@ export const getAllProducts=()=>async(dispatch)=>{
             payload: error
         })
     }
+}
+
+export const getProductByName = () => async(dispatch)=>{
+    
+
 }
 

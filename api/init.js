@@ -1,18 +1,15 @@
 module.exports= function init(){
     
-
-    const user = require("./models/User.js");
-    const category = require("./models/Category.js");
-    const products = require("./models/Product.js");
+    const User = require("./models/User.js");
+    const Category = require("./models/Category.js");
+    const Products = require("./models/Product.js");
 
     ////relaciones////
 
 
-    user.belongsToMany(products,{ through: "user_product" })
-    products.belongsToMany(user,{ through: "user_product" })
+    User.belongsToMany(Products,{ through: "user_product" })
+    Products.belongsToMany(User,{ through: "user_product" })
 
-    products.belongsToMany(category,{ through: "product_category" })
-    category.belongsToMany(products,{ through: "product_category" })
-
-
+    Products.belongsToMany(Category,{ through: "product_category" })
+    Category.belongsToMany(Products,{ through: "product_category" })
 }

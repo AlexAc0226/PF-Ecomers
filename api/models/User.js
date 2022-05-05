@@ -13,5 +13,6 @@ const sequelize=require('../db')
       allowNull: false,
     },        
   });
+  // CAMBIO asddasd
 
 module.exports = User

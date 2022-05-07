@@ -7,10 +7,12 @@ const createProduct = async(req, res) => {
             img: req.body.img,
             price: req.body.price,
             description: req.body.description,
+            rating: req.body.rating,
+            stock: req.body.stock,
             category: req.body.category
         }
 
-        if(!product.name || !product.img || !product.price || !product.description || !product.category) {
+        if(!product.name || !product.img || !product.price || !product.description || !product.category || !product.rating || !product.stock) {
             res.status(400).json({
                 msg: "Faltan datos..."
             })

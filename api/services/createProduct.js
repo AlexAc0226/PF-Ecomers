@@ -19,7 +19,7 @@ const addProduct = async (product, req, res) => {
         name: normalizeString(product.category),
       },
     });
-
+    
     await newProduct.addCategory(identCategory);
 
     res.status(201).json({

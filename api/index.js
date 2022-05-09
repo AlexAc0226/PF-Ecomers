@@ -5,7 +5,7 @@ const init =require('./init.js')
 
 init()
 
-app.listen(3000, () => {
+app.listen(3001, () => {
   sequelize
     .sync({ force: true })
 

@@ -1,3 +1,6 @@
+const Category = require("../../models/Category.js");
+const { types } = require("./arrayCategories");
+
 const postCategory = async (req, res, next) => {
     const { name } = req.body;
 

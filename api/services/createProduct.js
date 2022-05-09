@@ -1,19 +1,22 @@
-const Product = require('../models/Product')
-const Category = require('../models/Category')
+const Product = require("../models/Product");
+const Category = require("../models/Category");
 
+const normalizeString = require("../utils/normalizeString");
 
-const addProduct = async(product, req, res)=> {
- try {
+const addProduct = async (product, req, res) => {
+  try {
     const newProduct = await Product.create({
-      name: product.name,
-      img: product.img,
+      name: normalizeString(product.name),
       price: product.price,
+      rating: product.rating,
+      stock: product.stock,
       description: product.description,
+      img: product.img,
     });
 
     const [identCategory, boolCreate] = await Category.findOrCreate({
       where: {
-        name: product.category,
+        name: normalizeString(product.category),
       },
     });
 
@@ -21,11 +24,10 @@ const addProduct = async(product, req, res)=> {
 
     res.status(201).json({
       msg: "Producto creado",
-    })
+    });
   } catch (err) {
     console.log(err);
-  } 
-
-}
+  }
+};
 
 module.exports = addProduct;

@@ -21,11 +21,18 @@ const Product = sequelize.define("product", {
     type: DataTypes.STRING,
     allowNull: false
   },
-    description: {
+  description: {
     type: DataTypes.STRING,
     allowNull: false
   },
-   
+  rating:{
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  stock:{
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
 });
 
 module.exports = Product;

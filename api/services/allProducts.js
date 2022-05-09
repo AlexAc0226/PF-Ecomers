@@ -5,4 +5,5 @@ async function allProducts(res){
 
     res.send(response)
 }
+
 module.exports = allProducts;

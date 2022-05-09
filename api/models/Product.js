@@ -2,9 +2,10 @@ const { DataTypes } = require("sequelize");
 
 const sequelize = require("../db");
 
-const Product = sequelize.define("Product", {
+const Product = sequelize.define("product", {
   id: {
-    type: DataTypes.STRING,
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4,
     allowNull: false,
     primaryKey: true
   },
@@ -20,11 +21,18 @@ const Product = sequelize.define("Product", {
     type: DataTypes.STRING,
     allowNull: false
   },
-    description: {
+  description: {
     type: DataTypes.STRING,
     allowNull: false
   },
-   
+  rating:{
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  stock:{
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
 });
 
 module.exports = Product;

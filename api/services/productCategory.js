@@ -1,5 +1,5 @@
-async function category(category,req,res){
-    
+async function category(category, req, res) {
+
     res.send(category)
 }
-module.exports=category
+module.exports = category

@@ -1,11 +1,10 @@
 var express = require('express');
 var router = express.Router();
-
 let routerProducts = require("./products.js");
-let routerCategory = require("./category.js");
+let routerCategories = require("./categories.js");
 
 router.use("/products", routerProducts)
-router.use("/category", routerCategory)
+router.use("/categories", routerCategories)
 
 
 
